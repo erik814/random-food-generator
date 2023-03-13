@@ -13,6 +13,8 @@ function MealForm() {
     const [ingArray, setIngArray] = useState([]);
     const [instArray, setInstArray] = useState([]);
 
+    // const [meal, setMeal] = useState([]);
+
     // name
 
     const handleNameChange = (e) => {
@@ -23,6 +25,7 @@ function MealForm() {
     const handleDisplayName = (e) => {
         e.preventDefault()
         setDisplayName(formName)
+        setFormName("");
     };
 
     // ingredients 
@@ -36,6 +39,7 @@ function MealForm() {
         e.preventDefault()
         setIngArray([...ingArray, formIngredients])
         setDisplayIngredients([...ingArray, formIngredients].join(", "));
+        setFormIngredients("");
     }
 
     // instructions 
@@ -49,6 +53,35 @@ function MealForm() {
         e.preventDefault()
         setInstArray([...instArray, formInstructions])
         setDisplayInstructions([...instArray, formInstructions].join(", "));
+        setFormInstructions("");
+    }
+
+    // submit
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    
+        const newMeal = {
+            name: displayName,
+            ingredients: ingArray,
+            instructions: instArray
+        }
+    
+        fetch('/api/meal', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newMeal)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+    
+        setDisplayName('')
+        setDisplayIngredients('')
+        setDisplayInstructions('')
     }
 
     return(
@@ -102,6 +135,8 @@ function MealForm() {
                         />
                         <button onClick={handleInstArray}>Add instruction</button>
                     </div>
+
+                    <button onClick={handleSubmit}>Add Meal!</button>
                 </div>
             </form>
         </div>
