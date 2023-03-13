@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Generator, MealForm } from '../components';
+import { MealNav } from '../components';
 
 function MealsPage() {
 
     return(
         <div>
             <h1>Meals Page</h1>
-            <Generator/>
-            <MealForm/>
+            <MealNav/>
         </div>
     )
 
