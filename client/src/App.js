@@ -9,22 +9,28 @@ import './styles/global.css'
 function App() {
 
   return (
-    <AppProvider>
-      <BrowserRouter>
-        <Wrapper>
-          <Header />
-          <div className="pt-3 px-4">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/signup" element={<SignupPage />} />
-              <Route path="/meals" element={<MealsPage/>} />
-            </Routes>
-          </div>
-        </Wrapper>
-      </BrowserRouter>
-    </AppProvider>
+
+    <div>
+      <MealsPage/>
+    </div>
+
+
+    // <AppProvider>
+    //   <BrowserRouter>
+    //     <Wrapper>
+    //       <Header />
+    //       <div className="pt-3 px-4">
+    //         <Routes>
+    //           <Route path="/" element={<HomePage />} />
+    //           <Route path="/login" element={<LoginPage />} />
+    //           <Route path="/profile" element={<ProfilePage />} />
+    //           <Route path="/signup" element={<SignupPage />} />
+    //           <Route path="/meals" element={<MealsPage/>} />
+    //         </Routes>
+    //       </div>
+    //     </Wrapper>
+    //   </BrowserRouter>
+    // </AppProvider>
   );
 }
 

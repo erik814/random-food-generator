@@ -13,15 +13,15 @@ const MealNav = () => {
     return (
         <div>
             <nav>
-                <ul>
+                <ul className='meal-nav-list'>
                     <li>
-                        <button onClick={() => handleNavClick('generator')}>Generator</button>
+                        <div onClick={() => handleNavClick('generator')}>Random Recipe</div>
                     </li>
                     <li>
-                        <button onClick={() => handleNavClick('mealForm')}>Meal Form</button>
+                        <div onClick={() => handleNavClick('mealForm')}>Create A Recipe</div>
                     </li>
                     <li>
-                        <button onClick={() => handleNavClick('allMeals')}>All Meals</button>
+                        <div onClick={() => handleNavClick('allMeals')}>All Meals</div>
                     </li>
                 </ul>
             </nav>

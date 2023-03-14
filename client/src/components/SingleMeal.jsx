@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import EditMeal from './EditMeal';
 
 const SingleMeal = ({ meal, setMeal, setMeals, }) => {
+
+    // const [selectEdit, setSelectEdit] = useState(null);
 
     const handleMealDelete = () => {
         fetch(`/api/meal/${meal._id}`, {
@@ -29,6 +32,10 @@ const SingleMeal = ({ meal, setMeal, setMeals, }) => {
             });
     };
 
+    // const handleEditClick = (meal) => {
+    //     setSelectEdit(meal);
+    // };
+
     return (
         <div>
             <div>
@@ -38,9 +45,13 @@ const SingleMeal = ({ meal, setMeal, setMeals, }) => {
             </div>
 
             <div>
-                <button onClick={handleMealEdit}>Edit</button>
+                {/* <button onClick={handleEditClick()}>Edit</button> */}
                 <button onClick={handleMealDelete}>Delete</button>
             </div>
+
+            {/* {selectEdit && (
+                <EditMeal meal={meal} />
+            )} */}
         </div>
     );
 };

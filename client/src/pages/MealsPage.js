@@ -5,7 +5,7 @@ function MealsPage() {
 
     return(
         <div>
-            <h1>Meals Page</h1>
+            <h1>Easy Recipe Generator</h1>
             <MealNav/>
         </div>
     )

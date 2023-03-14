@@ -30,22 +30,10 @@ const AllMeals = () => {
                 </div>
             ))}
             {selectedMeal && (
-                <div>
-                    <SingleMeal meal={selectedMeal} setMeal={setSelectedMeal} setMeals={setMeals}/>
-                </div>
+                <SingleMeal meal={selectedMeal} setMeal={setSelectedMeal} setMeals={setMeals}/>
             )}
         </div>
     );
 };
-
-// const MealDetails = ({ meal }) => {
-//     return (
-//         <div>
-//             <h2>{meal.name}</h2>
-//             <p>Ingredients: {meal.ingredients.join(', ')}</p>
-//             <p>Instructions: {meal.instructions.join(', ')}</p>
-//         </div>
-//     );
-// };
 
 export default AllMeals;
