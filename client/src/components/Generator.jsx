@@ -27,21 +27,25 @@ function Generator() {
         <div className='generator-container'>
             {/* <p>Generator</p> */}
             {showRecipe && (
-                <div>
+                <div className='generator-container'>
                     <h3>{oneMeal.name}</h3>
 
                     <div className="random-ingredients">
                         <h4>Ingredients</h4>
-                        {oneMeal.ingredients?.map(function(item, idx) {
-                            return <p key={idx}>{item}</p>
-                        })}
+                        <ul className='ri-list'>
+                            {oneMeal.ingredients?.map(function(item, idx) {
+                                return <li key={idx}>{item}</li>
+                            })}
+                        </ul>
                     </div>
 
                     <div className="random-instructions">
                         <h4>Instructions</h4>
-                        {oneMeal.instructions?.map(function(item, idx) {
-                            return <p key={idx}>{item}</p>
-                        })}
+                        <ol>
+                            {oneMeal.instructions?.map(function(item, idx) {
+                                return <li key={idx}>{item}</li>
+                            })}
+                        </ol>
                     </div>
                 </div>
             )}

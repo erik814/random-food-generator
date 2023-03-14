@@ -85,7 +85,7 @@ function MealForm() {
     }
 
     return(
-        <div>
+        <div className='addMealPage'>
             <h1>Add a meal!</h1>
 
             <div className="new-display">
@@ -99,44 +99,50 @@ function MealForm() {
                 <div className="form-container">
                     <div className="form-section">
                         <label htmlFor="name">Name:</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="name"
-                            name="name"
-                            value={formName}
-                            onChange={handleNameChange}
-                        />
-                        <button onClick={handleDisplayName}>Update Name</button>
+                        <div className='text-button'>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="name"
+                                name="name"
+                                value={formName}
+                                onChange={handleNameChange}
+                            />
+                            <button className='form-button' onClick={handleDisplayName}>Add Name</button>
+                        </div>
                     </div>
 
                     <div className="form-section">
                         <label htmlFor="ingredients">Ingredients:</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="ingredients"
-                            name="ingredients"
-                            value={formIngredients}
-                            onChange={handleIngChange}
-                        />
-                        <button onClick={handleIngArray}>Add Ingredient</button>
+                        <div className='text-button'>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="ingredients"
+                                name="ingredients"
+                                value={formIngredients}
+                                onChange={handleIngChange}
+                            />
+                            <button className='form-button' onClick={handleIngArray}>Add Ingredient</button>
+                        </div>
                     </div>
 
                     <div className="form-section">
                         <label htmlFor="instructions">Instructions:</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="instructions"
-                            name="instructions"
-                            value={formInstructions}
-                            onChange={handleInstChange}
-                        />
-                        <button onClick={handleInstArray}>Add instruction</button>
+                        <div className='text-button'>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="instructions"
+                                name="instructions"
+                                value={formInstructions}
+                                onChange={handleInstChange}
+                            />
+                            <button className='form-button' onClick={handleInstArray}>Add instruction</button>
+                        </div>
                     </div>
 
-                    <button onClick={handleSubmit}>Add Meal!</button>
+                    <button className='add-meal-button' onClick={handleSubmit}>Add Meal!</button>
                 </div>
             </form>
         </div>
