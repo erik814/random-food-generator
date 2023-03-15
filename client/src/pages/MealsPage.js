@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { MealNav } from '../components';
 
 function MealsPage() {

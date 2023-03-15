@@ -22,16 +22,20 @@ const AllMeals = () => {
     };
 
     return (
-        <div>
+        <div className='all-meal-container'>
             <p>All Meals</p>
-            {meals.map((meal) => (
-                <div key={meal._id}>
-                    <button onClick={() => handleMealClick(meal)}>{meal.name}</button>
-                </div>
-            ))}
-            {selectedMeal && (
-                <SingleMeal meal={selectedMeal} setMeal={setSelectedMeal} setMeals={setMeals}/>
-            )}
+            <div className='all-meals'>
+                {meals.map((meal) => (
+                    <div className='all-meals-item' key={meal._id}>
+                        <button className='button' onClick={() => handleMealClick(meal)}>{meal.name}</button>
+                    </div>
+                ))}
+            </div>
+            <div className='new-display'>
+                {selectedMeal && (
+                    <SingleMeal meal={selectedMeal} setMeal={setSelectedMeal} setMeals={setMeals}/>
+                )}
+            </div>
         </div>
     );
 };

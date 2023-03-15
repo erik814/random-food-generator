@@ -1,16 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 :root {
   --radius: 16px;
+  --lox: #F78B2D;
+  --cil: #7AA802;
+  --toast: #E4B600;
+  --avo: #C7DB00;
+
+  --lox-op: rgb(247, 139, 45, 0.7);
+  --cil-op: rgb(122, 168, 2, 0.7);
+  --toast-op: rgb(228, 182, 0, 0.7);
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-image: url("../assets/wood-bg.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
+  color: white;
+  background-color: var(--cil);
   text-align: center;
+  font-size: 30px;
+  padding: 15px 0;
+  margin: 0;
 }
 
 .meal-nav-list {
+  color: white;
+  background-color: var(--toast);
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0;
+  padding: 5px 0;
 }
 
 .meal-nav-list li {
@@ -25,18 +51,49 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 h3 {
+  color: white;
+  background-color: var(--lox);
   font-size: 30px;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 5px 20px;
 }
 
 .random-ingredients {
+  color: white;
+  background-color: var(--toast-op);
   display: flex;
   flex-direction: column;
-  align-items: start;
-  width: 90%;
+  align-items: center;
+  width: auto;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.random-instructions {
+  color: white;
+  background-color: var(--cil-op);
+  width: auto;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.button {
+  color: white;
+  background-color: var(--lox);
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid black;
 }
 
 /* meal form */
@@ -48,7 +105,18 @@ h3 {
   justify-content: center;
 }
 
+.meal-form-header {
+  text-align: center;
+  font-size: 30px;
+  padding: 12px;
+  margin: 0;
+  border-radius: 16px;
+  border: 1px solid black;
+}
+
 .new-display {
+  color: white;
+  background-color: var(--lox-op);
   border: 1px solid black;
   width: 500px;
   padding: 10px;
@@ -66,11 +134,16 @@ h3 {
   width: 500px;
 }
 
+.form-section label {
+  color: white;
+}
+
 .text-button {
   display: flex;
 }
 
 .form-control {
+  border: 1px solid black;
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
   border-top-right-radius: 0;
@@ -78,6 +151,9 @@ h3 {
 }
 
 .form-button {
+  color: white;
+  background-color: var(--cil);
+  border: 1px solid black;
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }
@@ -88,4 +164,52 @@ h3 {
   padding: 5px;
   margin-top: 15px;
   border-radius: var(--radius);
+}
+
+/* all meals */
+
+.all-meal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-meals {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.all-meals-item {
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 480px) {
+  
+  /* generator */
+
+
+
+  
+  .addMealPage {
+    width: 100%;
+  }
+
+  .new-display {
+    width: 90%;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  .form-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .text-button {
+    width: 90%;
+
+  }
 }

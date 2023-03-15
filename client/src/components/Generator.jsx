@@ -50,7 +50,7 @@ function Generator() {
                 </div>
             )}
 
-            <button onClick={randomMeal}>Random Recipe</button>
+            <button className='button' onClick={randomMeal}>Random Recipe</button>
         </div>
     )
 

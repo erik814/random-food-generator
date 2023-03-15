@@ -86,7 +86,7 @@ function MealForm() {
 
     return(
         <div className='addMealPage'>
-            <h1>Add a meal!</h1>
+            <h1 className='meal-form-header'>Add a recipe!</h1>
 
             <div className="new-display">
                 <p>Name: {displayName}</p>
@@ -105,6 +105,7 @@ function MealForm() {
                                 className="form-control"
                                 id="name"
                                 name="name"
+                                placeholder="Recipe Name"
                                 value={formName}
                                 onChange={handleNameChange}
                             />
@@ -120,6 +121,7 @@ function MealForm() {
                                 className="form-control"
                                 id="ingredients"
                                 name="ingredients"
+                                placeholder="Ingredients - One at a time"
                                 value={formIngredients}
                                 onChange={handleIngChange}
                             />
@@ -135,6 +137,7 @@ function MealForm() {
                                 className="form-control"
                                 id="instructions"
                                 name="instructions"
+                                placeholder="Instructions - One at a time"
                                 value={formInstructions}
                                 onChange={handleInstChange}
                             />
@@ -142,7 +145,7 @@ function MealForm() {
                         </div>
                     </div>
 
-                    <button className='add-meal-button' onClick={handleSubmit}>Add Meal!</button>
+                    <button className='add-meal-button button' onClick={handleSubmit}>Add Meal!</button>
                 </div>
             </form>
         </div>
