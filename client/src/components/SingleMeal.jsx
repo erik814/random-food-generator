@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import EditMeal from './EditMeal';
 
 const SingleMeal = ({ meal, setMeal, setMeals, }) => {
 
@@ -21,16 +19,16 @@ const SingleMeal = ({ meal, setMeal, setMeals, }) => {
         setMeal(null);
     };
 
-    const handleMealEdit = () => {
-        console.log(meal)
-        fetch(`/api/meal/${meal._id}`, {
-            method: 'PUT',
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            });
-    };
+    // const handleMealEdit = () => {
+    //     console.log(meal)
+    //     fetch(`/api/meal/${meal._id}`, {
+    //         method: 'PUT',
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //         });
+    // };
 
     // const handleEditClick = (meal) => {
     //     setSelectEdit(meal);
