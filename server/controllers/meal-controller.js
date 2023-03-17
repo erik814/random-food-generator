@@ -2,12 +2,14 @@ const Meal = require('../models/Meal');
 
 module.exports = {
     getAllMeals(req, res) {
-        Meal.find()
-            .then((dbMealData) => res.json(dbMealData))
-            .catch((err) => {
-                console.log(err);
-                res.status(500).json(err);
-            });
+    res.json({ message: 'Hello World' })
+    // getAllMeals(req, res) {
+    //     Meal.find()
+    //         .then((dbMealData) => res.json(dbMealData))
+    //         .catch((err) => {
+    //             console.log(err);
+    //             res.status(500).json(err);
+    //         });
     },
 
     getSingleMeal(req, res) {
