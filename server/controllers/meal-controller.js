@@ -12,12 +12,12 @@ module.exports = {
 
     getSingleMeal(req, res) {
         Meal.findOne({ _id: req.params.mealId })
-            .then((dbMealData) => {
-                if (!dbMealData) {
+            .then((meal) => {
+                if (!meal) {
                     res.status(404).json({ message: 'No meal found with this id' });
                     return;
                 }
-                res.json(dbMealData);
+                res.json(meal);
             })
             .catch((err) => {
                 console.log(err);
@@ -26,6 +26,7 @@ module.exports = {
     },
 
     createMeal(req, res) {
+        console.log('req.body at controller: ', req.body)
         Meal.create(req.body)
             .then((dbMealData) => res.json(dbMealData))
             .catch((err) => {

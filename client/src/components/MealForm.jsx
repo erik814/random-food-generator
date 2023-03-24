@@ -76,7 +76,8 @@ function MealForm() {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                console.log(newMeal)
+                console.log('displayName: ', displayName)
             })
     
         setDisplayName('')
